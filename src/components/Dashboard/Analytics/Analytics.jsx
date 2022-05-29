@@ -1,5 +1,5 @@
 import React from 'react'
-import {useColorMode, Box, Center, Text,FormControl,Select,Tabs, TabList, TabPanels, Tab, TabPanel, Image} from "@chakra-ui/react"
+import {useColorMode, Box, Center, Text,FormControl,Select,Tabs, TabList, TabPanels, Tab, TabPanel} from "@chakra-ui/react"
 import {BiCheckCircle} from 'react-icons/bi'
 import { AreaChart, Area, XAxis, CartesianGrid, Tooltip } from 'recharts';
 import meta from '../../../assets/meta.jpeg'

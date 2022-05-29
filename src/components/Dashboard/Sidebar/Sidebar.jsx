@@ -95,13 +95,15 @@ function Sidebar() {
                                       
                                   </Tooltip>
                               </Link>
-                              <Tooltip width="200px" height="40px" color="white" fontWeight="bold" fontSize="1.3rem" bg="radial-gradient(circle at top, #7154E6 , #FB5B78)" borderRadius="50px" label='Profile' textAlign="center" placement='right'>
-                                  <Box cursor="pointer" color={active===8 ? "#FB5B78" :"#595B5D"} onClick={() => setActive(8)} _hover={{
-                                    color: '#FB5B78'
-                                  }} >
-                                        <FaRegUser size="1.5rem" />
-                                  </Box>
-                              </Tooltip>
+                              <Link to="/profile">
+                                <Tooltip width="200px" height="40px" color="white" fontWeight="bold" fontSize="1.3rem" bg="radial-gradient(circle at top, #7154E6 , #FB5B78)" borderRadius="50px" label='Profile' textAlign="center" placement='right'>
+                                    <Box cursor="pointer" color={active===8 ? "#FB5B78" :"#595B5D"} onClick={() => setActive(8)} _hover={{
+                                      color: '#FB5B78'
+                                    }} >
+                                          <FaRegUser size="1.5rem" />
+                                    </Box>
+                                </Tooltip>
+                              </Link>
                             
                             </Center>
                         </Box>
