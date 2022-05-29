@@ -1,0 +1,51 @@
+
+iframe {
+    border-radius: 10px;
+}
+
+/* Video & Stream hover Effect */
+
+.stream {
+    background-color: #FB5B78;
+    border-radius: 10px;
+  }
+  
+    .stream:before,
+    .stream:after {
+      background-color: #FB5B78;
+      width: 5px;
+      height: 5px;
+      transition: all .15s ease;
+    }
+  
+    .stream:before {
+      top: 0;
+      left: 0;
+      transform-origin: top left;
+      transform: rotate(-45deg) scale(0);
+    }
+  
+    .stream:after {
+      right: 0;
+      bottom: 0;
+      transform-origin: bottom right;
+      transform: rotate(45deg) scale(0);
+    }
+  
+    .stream__thumbnail {
+      transform: translate(0, 0);
+      transition: all .15s ease;
+      z-index: 10;
+    }
+  
+  .stream:hover .stream__thumbnail {
+    transform: translate(6px, -6px);
+  }
+  
+  .stream:hover:before {
+    transform: rotate(-45deg) scale(1);
+  }
+  
+  .stream:hover:after {
+    transform: rotate(45deg) scale(1);
+  }
