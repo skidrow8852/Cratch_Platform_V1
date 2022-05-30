@@ -16,6 +16,7 @@ import Favorites from './Favorites/Favorites';
 import Analytics from './Analytics/Analytics';
 import Messages from './Messages/Messages'
 import Profile from './Profile/Profile';
+import Settings from './Settings/Settings'
 
 
 function Dashboard() {
@@ -41,6 +42,7 @@ const Pages = () => {
                   <Route exact path="/analytics" element={<Analytics />} />
                   <Route exact path="/messages" element={<Messages />} />
                   <Route exact path="/profile" element={<Profile />} />
+                  <Route exact path="/settings" element={<Settings />} />
                 </Routes>
             </Box>
             {/* <Home /> */}

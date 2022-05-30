@@ -1,10 +1,14 @@
 import React from 'react'
-import {Box, Text, Avatar,Center, Input, Button, Stack, InputGroup, InputLeftElement, InputRightElement} from '@chakra-ui/react'
+import {Box, Text, Avatar,Center, Input, Button, Stack, InputGroup, AvatarBadge,
+        InputLeftElement, InputRightElement,Menu,MenuList,MenuItem,MenuButton} from '@chakra-ui/react'
 import img5 from '../../../assets/img5.jpg';
 import {FiSearch, FiSettings} from 'react-icons/fi';
-import {AiOutlineDown,AiOutlineVideoCameraAdd} from "react-icons/ai"
+import {AiOutlineDown,AiOutlineVideoCameraAdd,AiOutlineLogout} from "react-icons/ai"
 import {IoIosNotificationsOutline} from "react-icons/io"
+import {FaRegUser} from "react-icons/fa"
 import {Link} from 'react-router-dom'
+
+
 
 function Header() {
 
@@ -55,20 +59,42 @@ function Header() {
                 </Stack>
                 
                 <Stack alignContent="center" textAlign="center" justifyContent="center" ml={28} >
-                  <FiSettings size="1.4rem" color='#595B5D' cursor="pointer" />
+                  <Link to="/settings">
+                    <FiSettings size="1.4rem" color='#595B5D' cursor="pointer" />
+                  </Link>
                   
                 </Stack>
                 <Stack alignContent="center" textAlign="center" justifyContent="center" ml={8} >
-                <IoIosNotificationsOutline size='1.8rem' cursor="pointer" color='#595B5D' />
+                    <Menu isLazy>
+                      <MenuButton d="flex">
+                        <Avatar bg="transparent" icon={<IoIosNotificationsOutline size='1.8rem' cursor="pointer" color='#595B5D' />}>
+                          <AvatarBadge mb={5} pb={0.5} mr={1.5} textAlign="center" borderColor="transparent" color="white" w="1rem" h="1rem" bg="red" fontSize="0.75rem">3</AvatarBadge>
+                        </Avatar></MenuButton>
+                      <MenuList>
+                        {/* MenuItems are not rendered unless Menu is open */}
+                        <MenuItem  borderBottom="1px solid rgb(255,255,255,0.1)">You have a new message from SkidrowMusk</MenuItem>
+                        <MenuItem borderBottom="1px solid rgb(255,255,255,0.1)">You received 230 $CRTC from DavinciJ15</MenuItem>
+                        <MenuItem borderBottom="1px solid rgb(255,255,255,0.1)">Andrei554 followed you</MenuItem>
+                      </MenuList>
+                    </Menu>
+                
                 </Stack>
                 
                 <Stack>
                     <Box pt={4} pl={6} d="flex">
-                    <Center>
+                      <Menu isLazy >
+                        <MenuButton >
+                          <Center>
                       
                                   <Box ml={20} label="Studio" cursor="pointer" width="3rem" height="3rem" borderRadius="50%">
                                         {/* <Image src={img5} alt="John" width="3rem" height="3rem" borderRadius="50%" /> */}
-                                        <Avatar name='Skidrow' src={img5} />
+                                        
+                      
+                            <Avatar name='Skidrow' src={img5} />
+                        
+                      
+                    
+                                        
                                           
                                     
                                     </Box>
@@ -83,6 +109,30 @@ function Header() {
                                     </Center>
 
                     </Center>
+                    </MenuButton>
+                          <MenuList ml={20} bg="#242627" >
+                              {/* MenuItems are not rendered unless Menu is open */}
+                              <MenuItem  borderBottom="1px solid rgb(255,255,255,0.1)" fontSize="1.1rem">
+                                
+                                  <Center w="100%"><Box>
+                                    <Text pl={2} pb={2} fontWeight="bold" color="#FFD600">750 $CRTC</Text> 
+                                      <Button _hover={{bg : "rgb(62, 166, 255,0.89)"}} _active={{bg : "rgb(62, 166, 255,0.89)"}} bg="#3EA6FF" mb={2} color="#111315">Withdraw</Button></Box>
+                                  </Center>
+                                      
+                                
+                              </MenuItem>
+                              <Link to="/profile">
+                                 <MenuItem  borderBottom="1px solid rgb(255,255,255,0.1)" fontSize="1.1rem">
+                                     <Box pr={3} color="rgb(255,255,255,0.5)"><FaRegUser /></Box>Profile
+                                  </MenuItem>
+                                </Link>
+                                <Link to="/settings">
+                                  <MenuItem  borderBottom="1px solid rgb(255,255,255,0.1)" fontSize="1.1rem"><Box pr={3} color="rgb(255,255,255,0.5)"><FiSettings /></Box>Settings</MenuItem>
+                                </Link>
+                              
+                              <MenuItem borderBottom="1px solid rgb(255,255,255,0.1)" fontSize="1.1rem"><Box pr={3} color="rgb(255,255,255,0.5)"><AiOutlineLogout /></Box>Logout</MenuItem>
+                            </MenuList>
+                    </Menu>
                     
                   </Box>
                 </Stack>
