@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Text,Image , Avatar,Center, Button, Divider} from '@chakra-ui/react'
+import {Box, Text,Image , Avatar,Center, Button, Divider,AvatarBadge,Link} from '@chakra-ui/react'
 import {FaMedal, FaFilter} from 'react-icons/fa';
 import Carousel from 'nuka-carousel';
 import img5 from '../../../assets/img5.jpg';
@@ -16,6 +16,119 @@ import sandbox from '../../../assets/sandbox.webp'
 import metacratch from '../../../assets/metacratch.webp'
 import './style.css'
 
+const Followersdata = [
+  {
+      username: "YoungBd",
+      img : img2,
+      isVerified : true,
+      followers: "120K",
+      follow : false,
+      isOnline: true,
+      userId : 11230
+  },
+  
+  {
+      username: "Skidrow",
+      img : img7,
+      isVerified : true,
+      followers: "700K",
+      follow : false,
+      isOnline: true,
+      userId : 130
+  },
+  {
+      username: "DavinciJ15",
+      img : img6,
+      isVerified : false,
+      followers: "1M",
+      follow : false,
+      isOnline: true,
+      userId : 230
+  },
+  {
+      username: "AhselySs",
+      img : img7,
+      isVerified : true,
+      followers: "180K",
+      follow : false,
+      isOnline: true,
+      userId : 70
+  },
+  {
+      username: "JohnDoe",
+      img : img2,
+      isVerified : false,
+      followers: "720K",
+      follow : true,
+      isOnline: true,
+      userId : 7230
+  },
+  {
+      username: "JomaTech",
+      img : img2,
+      isVerified : true,
+      followers: "2M",
+      follow : false,
+      isOnline: true,
+      userId : 196
+  },
+  {
+    username: "YoungBd",
+    img : img2,
+    isVerified : true,
+    followers: "120K",
+    follow : false,
+    isOnline: true,
+    userId : 11230
+},
+
+{
+    username: "Skidrow",
+    img : img7,
+    isVerified : true,
+    followers: "700K",
+    follow : false,
+    isOnline: true,
+    userId : 130
+},
+{
+    username: "DavinciJ15",
+    img : img6,
+    isVerified : false,
+    followers: "1M",
+    follow : false,
+    isOnline: true,
+    userId : 230
+},
+{
+    username: "AhselySs",
+    img : img7,
+    isVerified : true,
+    followers: "180K",
+    follow : false,
+    isOnline: true,
+    userId : 70
+},
+{
+    username: "JohnDoe",
+    img : img2,
+    isVerified : false,
+    followers: "720K",
+    follow : true,
+    isOnline: true,
+    userId : 7230
+},
+{
+    username: "JomaTech",
+    img : img2,
+    isVerified : true,
+    followers: "2M",
+    follow : false,
+    isOnline: true,
+    userId : 196
+},
+
+]
 
 function Home() {
   const [activeLink, setActiveLink] = React.useState(1)
@@ -132,7 +245,7 @@ function Home() {
 
   const Player = () => {
     return(
-      <>
+      <> {}
       {videos.map(({userImage, userName, isVerified, title, watchingOrViews, videoUrl, isLive}) => (
         
         <Box borderRadius="20px" height="10.3rem" >
@@ -141,9 +254,9 @@ function Home() {
           
           }
       <Box cursor="pointer" className='stream'>
-              {isLive && <Box position="absolute" zIndex={20} pl={250} pt={2} textAlign="center" >
+              {(isLive && activeLink===1)  ? <Box position="absolute" zIndex={20} pl={250} pt={2} textAlign="center" >
                 <Text pt={0.4} fontSize="0.8rem" borderRadius="50px" height="1.5rem" fontWeight="500" width="2.5rem" bg="#FB5B78" >Live</Text>
-              </Box>}
+              </Box> : ""}
             
             
                 <ReactPlayer className="stream__thumbnail" url={videoUrl} height="100%" width="100%" style={{borderRadius : '20px'}}/>
@@ -169,7 +282,7 @@ function Home() {
                                       </Button>
                                         </Box>
                                       <Text as="h2" pt={1} color="rgb(255,255,255,0.85)" fontWeight="bold" fontSize="1rem">{title}</Text>
-                                      <Text as="h2" color="#595B5D" fontSize="0.8rem">{watchingOrViews} Watching</Text>
+                                      <Text as="h2" color="#595B5D" fontSize="0.8rem">{watchingOrViews} {activeLink === 1 ? "Watching" : "Views" }</Text>
 
                                      
                                     </Box>
@@ -408,7 +521,7 @@ function Home() {
                 <Text lineHeight="2rem"  cursor="pointer" ml={5} as="h4" borderBottom={activeLink === 2 ? "1px solid #FB5B78" : ""} color={activeLink === 2 ? "#FB5B78" : "rgba(255,255,255,0.63)"}  fontSize="1rem" onClick={()=> setActiveLink(2)}>Top Videos</Text>
                 <Text lineHeight="2rem" cursor="pointer" ml={5} as="h4" borderBottom={activeLink === 3 ? "1px solid #FB5B78" : ""} color={activeLink === 3 ? "#FB5B78" : "rgba(255,255,255,0.63)"}  fontSize="1rem" onClick={()=> setActiveLink(3)}>Currently Online</Text>
                 <Text lineHeight="2rem" cursor="pointer" ml={5} as="h4" borderBottom={activeLink === 4 ? "1px solid #FB5B78" : ""} color={activeLink === 4 ? "#FB5B78" : "rgba(255,255,255,0.63)"}  fontSize="1rem" onClick={()=> setActiveLink(4)}>Verified</Text>
-                <Image ml={4} width="9rem" src={metacratch} alt="metacratch" cursor="pointer" />
+                <Link href="https://meta.cratch.io" isExternal> <Image ml={4} width="9rem" src={metacratch} alt="metacratch" cursor="pointer" /></Link>
             </Box>
             <Box width="20%" textAlign="right">
               <Button borderRadius="50px" leftIcon={<FaFilter size="0.8rem" />} height="2.2rem">Filter</Button>
@@ -416,7 +529,123 @@ function Home() {
           </Box>
           
           <Box pt={4} d="flex" gap={6}>
-              <Player  />
+
+              {(activeLink === 1 || activeLink === 2) &&<Player  />}
+
+                
+                  {activeLink === 3 && <Box pt={4} d="grid" w="100%" gridTemplateColumns="4fr 4fr 4fr 4fr" rowGap={6} columnGap={4}>
+                    {Followersdata.map(({username,img,followers,isOnline,isVerified}) => (
+                      <Box d="flex">
+                        {isOnline && <Center width="100%">
+                        <Box w="100%" d="flex">
+                        <Box width="50%" d="flex">
+                            <Box  label="Studio" cursor="pointer"  width="2.3rem" height="2.3rem" borderRadius="50%" >
+                                          {/* <Image src={img6} alt="John" width="2.3rem" height="2.3rem" borderRadius="50%" /> */}
+
+                                          <Avatar name='YoungBd' size="2.3rem" src={img} >
+                                            <AvatarBadge boxSize='1rem' bg='#55D64F' /> 
+                                          </Avatar>
+                                            
+                                      
+                                      </Box>
+
+                                      <Box pl={5}>
+                                          <Box d="flex">
+                                            <Text as="h3" color="#FFD600" fontWeight="600" cursor="pointer">{username}</Text>
+                                            {isVerified && <Box pl={2} pt={1}><AiFillCheckCircle fill="#FFD600" /></Box>}
+                                          </Box>
+                                        
+                                        <Text as="h2" color="#595B5D" fontSize="0.8rem">{followers} Followers</Text>
+                                      </Box>
+                        </Box>
+                                    
+                                    <Box width="50%" d="flex" pl={5} pt={1}>
+                                      
+                                        <Box width="100%">
+                                            
+                                                  <Button _hover={{
+                                                      bg: 'rgb(255,255,255,0.1)'
+                                                      }} _active={{bg: 'transparent'}} bg="transparent" border="1px solid white" 
+                                                      
+                                                      pb={1}
+                                                      borderRadius="5px" height="2rem" width="7rem">
+                                                      Follow
+                                                  </Button>
+                                              
+                                        </Box>
+                                        
+                                    </Box>
+                        </Box>
+                        
+
+                                    
+                      </Center>}
+                      
+                
+                    </Box>
+                    ))}</Box>
+                    
+                    }
+
+                {activeLink === 4 && <Box pt={4} d="grid" w="100%" gridTemplateColumns="4fr 4fr 4fr 4fr" rowGap={6} columnGap={4}>
+                    {Followersdata.map(({username,img,followers,isOnline,isVerified}) => (
+                      <>
+                      {isVerified && 
+                        <Box d="flex">
+                        <Center width="100%">
+                        <Box w="100%" d="flex">
+                        <Box width="50%" d="flex">
+                            <Box  label="Studio" cursor="pointer"  width="2.3rem" height="2.3rem" borderRadius="50%" >
+                                          {/* <Image src={img6} alt="John" width="2.3rem" height="2.3rem" borderRadius="50%" /> */}
+
+                                          <Avatar name='YoungBd' size="2.3rem" src={img} >
+                                            {isOnline ? <AvatarBadge boxSize='1rem' bg='#55D64F' /> : <AvatarBadge boxSize='1rem' bg='grey' />} 
+                                          </Avatar>
+                                            
+                                      
+                                      </Box>
+
+                                      <Box pl={5}>
+                                          <Box d="flex">
+                                            <Text as="h3" color="#FFD600" fontWeight="600" cursor="pointer">{username}</Text>
+                                              <Box pl={2} pt={1}><AiFillCheckCircle fill="#FFD600" /></Box>
+                                          </Box>
+                                        
+                                        <Text as="h2" color="#595B5D" fontSize="0.8rem">{followers} Followers</Text>
+                                      </Box>
+                        </Box>
+                                    
+                                    <Box width="50%" d="flex" pl={5} pt={1}>
+                                      
+                                        <Box width="100%">
+                                            
+                                                  <Button _hover={{
+                                                      bg: 'rgb(255,255,255,0.1)'
+                                                      }} _active={{bg: 'transparent'}} bg="transparent" border="1px solid white" 
+                                                      
+                                                      pb={1}
+                                                      borderRadius="5px" height="2rem" width="7rem">
+                                                      Follow
+                                                  </Button>
+                                              
+                                        </Box>
+                                        
+                                    </Box>
+                        </Box>
+                        
+
+                                    
+                      </Center>
+                      
+                
+                        </Box>
+                      }
+                      </>
+                      
+                    ))}
+                    </Box>
+                    }
+                
              
           </Box>
           

@@ -43,18 +43,19 @@ return (
           <Box width="50%" pl={16}>
 
                       <Text as="h3" color="rgb(255,255,255,0.95)" fontSize="1.1rem" fontFamily="sans-serif"  fontWeight="bold" pt={3}>Category</Text>           
-                      <Text as="p" fontSize="0.9rem" color="rgb(255,255,255,0.50)" pt={2}>Add your stream to a category so viewrs can find it more easily</Text>
+                      <Text as="p" fontSize="0.9rem" color="rgb(255,255,255,0.50)" pt={2}>Add your stream to a category so viewers can find it more easily</Text>
                       <FormControl pt={3}>
                         
                       <Select size="lg" bg="#111315" color="white" >
                         <option value='Crypto' selected>&nbsp;Crypto</option>
                         <option value='Gaming'>&nbsp;Gaming</option>
+                        <option value='Play 2 Earn'>&nbsp;Play 2 Earn</option>
                         <option value='Lifectyle'>&nbsp;Lifectyle</option>
-                        <option value='Lifectyle'>&nbsp;Educational</option>
-                        <option value='Lifectyle'>&nbsp;Sports</option>
-                        <option value='Lifectyle'>&nbsp;Travel & Events</option>
-                        <option value='Lifectyle'>&nbsp;Film & Animation</option>
-                        <option value='Lifectyle'>&nbsp;People & Blogs</option>
+                        <option value='Educational'>&nbsp;Educational</option>
+                        <option value='Sports'>&nbsp;Sports</option>
+                        <option value='Travel & Events'>&nbsp;Travel & Events</option>
+                        <option value='Film & Animation'>&nbsp;Film & Animation</option>
+                        <option value='People & Blogs'>&nbsp;People & Blogs</option>
                       </Select>
                       </FormControl>
                       

@@ -1,6 +1,6 @@
 import React from 'react'
 import {Box, Center, useColorMode, Text, Link,Modal,Input,FormLabel, Textarea,  FormControl,RadioGroup,Stack,Radio,
-  ModalOverlay,
+  ModalOverlay,Select,
   ModalContent,
   ModalBody,
   ModalCloseButton,useDisclosure, Button} from '@chakra-ui/react'
@@ -335,6 +335,23 @@ React.useEffect(() => {
                           <Box width="25%" bg="#111315" onClick={() => setActive(3)} cursor="pointer" borderRadius="2px" border={active === 3 ? '1px solid white' : ""}></Box>
                       </Box>
                       
+                      <Text as="h3" color="rgb(255,255,255,0.95)" fontSize="1.1rem" fontFamily="sans-serif" pt={5} fontWeight="bold">Category</Text>
+                      <Text as="p" fontSize="0.9rem" color="rgb(255,255,255,0.50)">Add your video to a category so viewers can find it more easily</Text>
+                      <FormControl pt={3}>
+                        
+                          <Select size="lg" bg="#242627" color="white" >
+                            <option value='Crypto' selected>&nbsp;Crypto</option>
+                            <option value='Gaming'>&nbsp;Gaming</option>
+                            <option value='Play 2 Earn'>&nbsp;Play 2 Earn</option>
+                            <option value='Lifectyle'>&nbsp;Lifectyle</option>
+                            <option value='Educational'>&nbsp;Educational</option>
+                            <option value='Sports'>&nbsp;Sports</option>
+                            <option value='Travel & Events'>&nbsp;Travel & Events</option>
+                            <option value='Film & Animation'>&nbsp;Film & Animation</option>
+                            <option value='People & Blogs'>&nbsp;People & Blogs</option>
+                          </Select>
+                      </FormControl>
+
                       <Text as="h3" color="rgb(255,255,255,0.95)" fontSize="1.1rem" fontFamily="sans-serif" pt={5} fontWeight="bold">Tags</Text>
                       <Text as="p" fontSize="0.9rem" color="rgb(255,255,255,0.50)">Tags can be useful if content in your video is commonly misspelled.</Text>
                       <FormControl pt={3}>
