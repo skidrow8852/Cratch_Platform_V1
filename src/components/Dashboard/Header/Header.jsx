@@ -70,7 +70,7 @@ function Header() {
                         <Avatar bg="transparent" icon={<IoIosNotificationsOutline size='1.8rem' cursor="pointer" color='#595B5D' />}>
                           <AvatarBadge mb={5} pb={0.5} mr={1.5} textAlign="center" borderColor="transparent" color="white" w="1rem" h="1rem" bg="red" fontSize="0.75rem">3</AvatarBadge>
                         </Avatar></MenuButton>
-                      <MenuList>
+                      <MenuList bg="#37393A">
                         {/* MenuItems are not rendered unless Menu is open */}
                         <MenuItem  borderBottom="1px solid rgb(255,255,255,0.1)">You have a new message from SkidrowMusk</MenuItem>
                         <MenuItem borderBottom="1px solid rgb(255,255,255,0.1)">You received 230 $CRTC from DavinciJ15</MenuItem>
