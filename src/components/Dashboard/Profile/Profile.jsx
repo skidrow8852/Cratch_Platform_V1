@@ -11,7 +11,7 @@ function Profile() {
     const videos = [
         {
           videoUrl : "https://www.youtube.com/watch?v=9QvRjjNzRMQ",
-          title : "Let's win this battle together",
+          title : "Let's win this battle together yooooooo!",
           watchingOrViews : '882,766',
     
         },
@@ -38,7 +38,7 @@ function Profile() {
 
     return (
       <Box width="100%" height="88%" bg={colorMode === "dark" ? "#111315" : "white"} fontFamily="heading" >
-            <Center>
+            <Center w="100%" h="100%">
               <Box width="95%" height="100%" >
                       <Box width="100%">
                           <Text width="100%" as="h1" fontSize="1.7rem" color="rgb(255,255,255,0.90)" fontFamily="sans-serif" pt={3} pb={5}  fontWeight="bold">Profile</Text>
@@ -87,7 +87,7 @@ function Profile() {
 
                                                             <Box pl={5}>
                                                                 
-                                                            <Text as="h2" pt={1} color="rgb(255,255,255,0.85)" fontWeight="bold" fontSize="1rem">{title}</Text>
+                                                            <Text as="h2" lineHeight="1.3rem" color="rgb(255,255,255,0.85)" fontWeight="bold" fontSize="1rem" noOfLines={2}>{title}</Text>
                                                             <Text as="h2" color="#595B5D" fontSize="0.8rem">{watchingOrViews} views</Text>
 
                                                             

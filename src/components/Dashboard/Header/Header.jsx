@@ -34,7 +34,7 @@ function Header() {
 
   return (
     <>
-    <Box width="100%" height="12%" d="flex">
+    <Box width="100%" height="12%" d="flex" position="sticky">
                   <Stack width="35%" alignContent="center" textAlign="center" justifyContent="center" ml={8} >
                       <InputGroup >
                         <InputLeftElement pt={2} pl={4} children={<FiSearch color="#595B5D" size="1.5rem" />}  />

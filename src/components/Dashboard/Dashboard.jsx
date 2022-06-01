@@ -8,7 +8,7 @@ import {ColorModeScript} from '@chakra-ui/color-mode';
 import theme from '../../theme'
 import Studio from './Studio/Studio';
 import { Routes, Route } from "react-router-dom";
-import Stream from './Stream/CreateStream';
+import CreateStream from './Stream/CreateStream';
 import StreamInfo from './Stream/StreamInfo';
 import Followers from './Followers/Followers';
 import Content from './Content/Content';
@@ -17,7 +17,7 @@ import Analytics from './Analytics/Analytics';
 import Messages from './Messages/Messages'
 import Profile from './Profile/Profile';
 import Settings from './Settings/Settings'
-
+import Stream from './Stream/Stream'
 
 function Dashboard() {
   const {colorMode} = useColorMode();
@@ -31,10 +31,10 @@ const Pages = () => {
             <Box width="82%" height="100vh" bg={colorMode === "dark" ? "#111315" : "white"} fontFamily="heading">
                 <Header />
                 <Routes>
-
                   <Route exact path="/" element={<Home />} />
                   <Route exact path="/studio" element={<Studio />} />
-                  <Route exact path="/stream" element={<Stream />} />
+                  <Route exact path="/stream" element={<CreateStream />} />
+                  <Route exact path="/live/:id" element={<Stream />} />
                   <Route exact path="/stream/:id" element={<StreamInfo />} />
                   <Route exact path="/followers" element={<Followers />} />
                   <Route exact path="/content" element={<Content />} />
@@ -43,6 +43,7 @@ const Pages = () => {
                   <Route exact path="/messages" element={<Messages />} />
                   <Route exact path="/profile" element={<Profile />} />
                   <Route exact path="/settings" element={<Settings />} />
+                  
                 </Routes>
             </Box>
             {/* <Home /> */}

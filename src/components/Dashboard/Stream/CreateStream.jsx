@@ -2,14 +2,14 @@ import React from 'react'
 import {useColorMode, Box, Text, Center, FormControl, FormLabel, Textarea, Input, RadioGroup, Stack,Radio, Button, Select} from "@chakra-ui/react"
 import {Link} from 'react-router-dom'
 
-function Stream() {
+function CreateStream() {
 
 const {colorMode} = useColorMode();
 
 return (
     <>
     <Box width="100%" height="88%" bg={colorMode === "dark" ? "#111315" : "white"} fontFamily="heading" >
-      <Center>
+      <Center w="100%" h="100%">
          <Box width="94%" height="100%" >
           <Text as="h1" fontSize="1.7rem" color="rgb(255,255,255,0.90)" fontFamily="sans-serif" pt={3} pb={5} borderBottom="1px solid rgb(96, 96, 96,0.6)" fontWeight="bold">Create stream</Text>
           <Box d="flex" pt={8}>
@@ -95,4 +95,4 @@ return (
   )
 }
 
-export default Stream
+export default CreateStream

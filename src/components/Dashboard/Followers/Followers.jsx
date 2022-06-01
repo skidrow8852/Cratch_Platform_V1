@@ -95,7 +95,7 @@ const filter = (e) => {
 
   return (
     <Box width="100%" height="88%" bg={colorMode === "dark" ? "#111315" : "white"} fontFamily="heading" >
-      <Center>
+      <Center w="100%" h="100%">
          <Box width="94%" height="100%" >
              <Box d="flex" borderBottom="1px solid rgb(96, 96, 96,0.6)" width="100%">
                  <Box width="80%">

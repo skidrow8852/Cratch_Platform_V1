@@ -2,6 +2,7 @@ import React from 'react'
 import {Box,Center,Text,Button, Avatar} from '@chakra-ui/react';
 import {AiFillCheckCircle} from "react-icons/ai"
 import {Link} from "react-router-dom";
+import {RiUserFollowLine} from 'react-icons/ri'
 
 function FollowerComponent({username,img,isVerified,followers, userId,follow}) {
   return (
@@ -30,7 +31,7 @@ function FollowerComponent({username,img,isVerified,followers, userId,follow}) {
                               
                               <Box width="60%" d="flex"  ml={10} pr={10 }>
                                   <Box width="50%">
-                                     <Button _hover={{
+                                     <Button leftIcon={follow ? <></> : <RiUserFollowLine />} _hover={{
                                             bg: '#63B3ED'
                                             }} _active={{bg: '#63B3ED'}} bg={follow ? "rgb(66, 153, 225,0.45)" : "blue.400"} 
                                             

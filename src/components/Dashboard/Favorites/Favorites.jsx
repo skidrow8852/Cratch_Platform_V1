@@ -21,7 +21,7 @@ function Favorites() {
     <>
 
     <Box width="100%" height="88%" bg={colorMode === "dark" ? "#111315" : "white"} fontFamily="heading" >
-          <Center>
+          <Center w="100%" h="100%">
             <Box width="95%" height="100%" >
                     <Box width="100%" borderBottom="1px solid rgb(255,255,255,0.15)">
                         <Text width="100%" as="h1" fontSize="1.7rem" color="rgb(255,255,255,0.90)" fontFamily="sans-serif" pt={3} pb={5}  fontWeight="bold">Favorites</Text>
@@ -33,7 +33,7 @@ function Favorites() {
                                                     
                             <Box>
                                   <ReactPlayer borderRadius="1px" width="100%" height="100%" url={videoUrl}  />
-                                  <Text pt={2}>{title}</Text>
+                                  <Text pt={2} noOfLines={2}>{title}</Text>
                                   <Box d="flex" pt={2}>
                                                             
                                       <Avatar src={img} h="2rem" w="2rem"/>

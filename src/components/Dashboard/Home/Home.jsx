@@ -160,7 +160,7 @@ function Home() {
       userName : 'LeoMercy',
       isVerified : true,
       isLive: true,
-      title : 'Just Chatting with you Heroes',
+      title : 'Just Chatting with you Heroes, talking about life and the Universe )',
       watchingOrViews : '331,842',
 
     },
@@ -246,7 +246,8 @@ function Home() {
   const Player = () => {
     return(
       <> {}
-      {videos.map(({userImage, userName, isVerified, title, watchingOrViews, videoUrl, isLive}) => (
+      <Box d="grid" gridTemplateColumns="4fr 4fr 4fr 4fr" columnGap={5}>
+        {videos.map(({userImage, userName, isVerified, title, watchingOrViews, videoUrl, isLive}) => (
         
         <Box borderRadius="20px" height="10.3rem" >
           {
@@ -263,8 +264,8 @@ function Home() {
       </Box>
 
               
-                    <Box d="flex" pt={3}>
-                                    <Box pt={1} label="Studio" cursor="pointer"  width="2.3rem" height="2.3rem" borderRadius="50%">
+                    <Box d="flex" mt={3}>
+                                    <Box mt={1} label="Studio" cursor="pointer"  width="2.3rem" height="2.3rem" borderRadius="50%">
                                         <Image src={userImage} alt="John" width="2.3rem" height="2.3rem" borderRadius="50%" />
 
                                     </Box>
@@ -281,7 +282,7 @@ function Home() {
                                               Axie
                                       </Button>
                                         </Box>
-                                      <Text as="h2" pt={1} color="rgb(255,255,255,0.85)" fontWeight="bold" fontSize="1rem">{title}</Text>
+                                      <Text noOfLines={2} lineHeight="1.25rem" as="h2" pt={1} color="rgb(255,255,255,0.85)"  fontSize="1rem">{title}</Text>
                                       <Text as="h2" color="#595B5D" fontSize="0.8rem">{watchingOrViews} {activeLink === 1 ? "Watching" : "Views" }</Text>
 
                                      
@@ -289,6 +290,8 @@ function Home() {
                      </Box>
           </Box>
       ))}
+      </Box>
+      
       
                               
               

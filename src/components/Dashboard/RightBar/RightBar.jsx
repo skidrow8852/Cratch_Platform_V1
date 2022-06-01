@@ -95,7 +95,7 @@ function RightBar() {
   const {colorMode} = useColorMode(); 
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
-           <Box width="8%" bg={colorMode === "dark" ? "#111315" : "white"} height="100vh">
+           <Box position="sticky" width="8%" bg={colorMode === "dark" ? "#111315" : "white"} height="100vh">
 
             <Center justifyContent="center" d="flex" flexDirection="column" alignContent="center" textAlign="center">
                           <Box label="Studio" cursor="pointer" bg="rgb(39, 42, 45,0.61)" mt={5} width="2.4rem" height="2.4rem" borderRadius="50%">

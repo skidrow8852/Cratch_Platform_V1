@@ -11,6 +11,8 @@ function Settings() {
                       <Box width="100%">
                           <Text width="100%" as="h1" fontSize="1.7rem" color="rgb(255,255,255,0.90)" fontFamily="sans-serif" pt={3} pb={5}  fontWeight="bold">Settings</Text>
                       </Box>
+
+                    
               </Box>
             </Center>
     </Box>
