@@ -15,6 +15,7 @@ import pubg from '../../../assets/pubg.png'
 import sandbox from '../../../assets/sandbox.webp'
 import metacratch from '../../../assets/metacratch.webp'
 import './style.css'
+import {Link as RouterLink} from "react-router-dom"
 
 const Followersdata = [
   {
@@ -132,6 +133,7 @@ const Followersdata = [
 
 function Home() {
   const [activeLink, setActiveLink] = React.useState(1)
+  const [route, setRoute] = React.useState("/lives")
 
   const videos = [
     {
@@ -274,13 +276,13 @@ function Home() {
                                         <Box d="flex">
                                           <Text as="h3" fontSize="0.9rem" color="#FFD600" fontWeight="600" cursor="pointer">{userName}</Text>
                                           {isVerified && <Box pl={2} pt={1}><AiFillCheckCircle fill="#FFD600" /></Box>}
-                                          <Button ml="2rem" _hover={{
+                                          {activeLink===1 && <Button ml="2rem" _hover={{
                                               bg: 'rgb(123, 91, 251)'
                                             }} _active={{bg: 'rgb(123, 91, 251)'}} bg="rgb(123, 91, 251,0.92)" 
                                               leftIcon={<BiVideoPlus size="1.2rem" fill='white'/>}  
                                               borderRadius="50" height="1.5rem" width="4.5rem" fontSize="0.9rem">
                                               Axie
-                                      </Button>
+                                      </Button>}
                                         </Box>
                                       <Text noOfLines={2} lineHeight="1.25rem" as="h2" pt={1} color="rgb(255,255,255,0.85)"  fontSize="1rem">{title}</Text>
                                       <Text as="h2" color="#595B5D" fontSize="0.8rem">{watchingOrViews} {activeLink === 1 ? "Watching" : "Views" }</Text>
@@ -516,14 +518,14 @@ function Home() {
           <Text as="h3" color="rgb(255,255,255,0.69)" fontFamily="sans-serif" fontSize="0.9rem" textTransform="uppercase" pt={5}>trending</Text>
           <Box width="100%" d="flex" flexDirection="row" >
             <Text width="80%" as="h3" color="rgb(255,255,255,0.95)" fontSize="1.3rem" fontWeight="bold" textTransform="capitalize">#play with axie</Text>
-            <Text textAlign="right" width="20%" as="h3" pr={2} cursor="pointer" color="#FB5B78" fontSize="1rem" textTransform="capitalize">View All</Text>
+            <Text textAlign="right" width="20%" as="h3" pr={2} cursor="pointer" color="#FB5B78" fontSize="1rem" textTransform="capitalize"><RouterLink to={route}>View All</RouterLink></Text>
           </Box>
           <Box  pt={2.5} d="flex" flexDirection="row">
             <Box d="flex" width="80%">
-                <Text lineHeight="2rem" cursor="pointer" as="h4" borderBottom={activeLink === 1 ? "1px solid #FB5B78" : ""} color={activeLink === 1 ? "#FB5B78" : "rgba(255,255,255,0.63)"}  fontSize="1rem" onClick={()=> setActiveLink(1)}>Top Streams</Text>
-                <Text lineHeight="2rem"  cursor="pointer" ml={5} as="h4" borderBottom={activeLink === 2 ? "1px solid #FB5B78" : ""} color={activeLink === 2 ? "#FB5B78" : "rgba(255,255,255,0.63)"}  fontSize="1rem" onClick={()=> setActiveLink(2)}>Top Videos</Text>
-                <Text lineHeight="2rem" cursor="pointer" ml={5} as="h4" borderBottom={activeLink === 3 ? "1px solid #FB5B78" : ""} color={activeLink === 3 ? "#FB5B78" : "rgba(255,255,255,0.63)"}  fontSize="1rem" onClick={()=> setActiveLink(3)}>Currently Online</Text>
-                <Text lineHeight="2rem" cursor="pointer" ml={5} as="h4" borderBottom={activeLink === 4 ? "1px solid #FB5B78" : ""} color={activeLink === 4 ? "#FB5B78" : "rgba(255,255,255,0.63)"}  fontSize="1rem" onClick={()=> setActiveLink(4)}>Verified</Text>
+                <Text lineHeight="2rem" cursor="pointer" as="h4" borderBottom={activeLink === 1 ? "1px solid #FB5B78" : ""} color={activeLink === 1 ? "#FB5B78" : "rgba(255,255,255,0.63)"}  fontSize="1rem" onClick={()=> {setActiveLink(1); setRoute("/lives")}}>Top Streams</Text>
+                <Text lineHeight="2rem"  cursor="pointer" ml={5} as="h4" borderBottom={activeLink === 2 ? "1px solid #FB5B78" : ""} color={activeLink === 2 ? "#FB5B78" : "rgba(255,255,255,0.63)"}  fontSize="1rem" onClick={()=> {setActiveLink(2); setRoute("/videos")}}>Top Videos</Text>
+                <Text lineHeight="2rem" cursor="pointer" ml={5} as="h4" borderBottom={activeLink === 3 ? "1px solid #FB5B78" : ""} color={activeLink === 3 ? "#FB5B78" : "rgba(255,255,255,0.63)"}  fontSize="1rem" onClick={()=> {setActiveLink(3); setRoute("/online_users")}}>Currently Online</Text>
+                <Text lineHeight="2rem" cursor="pointer" ml={5} as="h4" borderBottom={activeLink === 4 ? "1px solid #FB5B78" : ""} color={activeLink === 4 ? "#FB5B78" : "rgba(255,255,255,0.63)"}  fontSize="1rem" onClick={()=> {setActiveLink(4); setRoute("/verified_users")}}>Verified</Text>
                 <Link href="https://meta.cratch.io" isExternal> <Image ml={4} width="9rem" src={metacratch} alt="metacratch" cursor="pointer" /></Link>
             </Box>
             <Box width="20%" textAlign="right">
