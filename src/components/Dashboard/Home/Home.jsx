@@ -301,14 +301,14 @@ function Home() {
 
   return (
     <>
-
+        
 
             {
               /* Carousel and Top Streamers blocks */
               
               }
 
-        <Box d="flex" width="100%" height="34%" borderRadius="20px" columnGap={16}>
+        <Box d="flex" width="100%" height="34%" borderRadius="20px" columnGap={16} >
           <Box width="60%">
             <Carousel enableKeyboardControls={true} renderBottomCenterControls={props => <PagingDots {...props} />} autoplay={true} autoplayInterval={8000} wrapAround={true} renderCenterLeftControls={() => (null)} renderCenterRightControls={() => (null)}>
                 

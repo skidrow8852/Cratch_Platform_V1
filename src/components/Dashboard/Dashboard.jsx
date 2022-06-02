@@ -18,6 +18,7 @@ import Messages from './Messages/Messages'
 import Profile from './Profile/Profile';
 import Settings from './Settings/Settings'
 import Stream from './Stream/Stream'
+import Video from './Videos/Video';
 
 function Dashboard() {
   const {colorMode} = useColorMode();
@@ -36,6 +37,7 @@ const Pages = () => {
                   <Route exact path="/stream" element={<CreateStream />} />
                   <Route exact path="/live/:id" element={<Stream />} />
                   <Route exact path="/stream/:id" element={<StreamInfo />} />
+                  <Route exact path="/video/:id" element={<Video />} />
                   <Route exact path="/followers" element={<Followers />} />
                   <Route exact path="/content" element={<Content />} />
                   <Route exact path="/favorites" element={<Favorites />} />

@@ -65,7 +65,7 @@ function Messages() {
                                 <Box width="100%" d="grid" gridTemplateRows="4fr 4fr 4fr 4fr" gap={5} pt={5}>
                                         <Box w="auto"  d="flex">
                                             <Avatar w="2rem" h="2rem" src={img5} ml={1} mt={1} />
-                                            <Text bg="rgb(18, 19, 20,0.2)" pl={5} ml={2} pt={2} pb={2} pr={5} borderRadius="2px 15px 15px 15px">  
+                                            <Text bg="rgb(18, 19, 20,0.2)" pl={5} ml={2} pt={2} pb={2} pr={5} borderRadius="2px 10px 10px 10px">  
                                                 sjhgdsjhgdsbjkdjshgdhsjgd
                                             </Text>
                                             <Center pl={5}>
@@ -77,7 +77,7 @@ function Messages() {
                                             <Center pr={3} textAlign="right">
                                                 <Text color="rgb(255,255,255,0.5)" fontSize="0.8rem">2:03 PM</Text>
                                             </Center>
-                                            <Text bg="#4552FE" pl={5} ml={2} pt={2} pb={2} pr={5} borderRadius="15px 2px 15px 15px">  
+                                            <Text bg="#4552FE" pl={5} ml={2} pt={2} pb={2} pr={5} borderRadius="10px 2px 10px 10px">  
                                                 Weill kjshdnkshdlkjhnlkj hkjn lkkjh lkj j
                                             </Text>
                                             

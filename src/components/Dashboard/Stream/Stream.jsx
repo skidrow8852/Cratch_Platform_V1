@@ -119,7 +119,7 @@ function Stream() {
                   <Text as="h3" fontSize="1.2rem" fontWeight="bold">Live chat room</Text>
               </Box>
               <Box h="75%" overflowY="auto" maxHeight="75%" pl={5}>
-                  <Box>
+                  <Box pb={3}>
                               <Box w="auto"  d="flex">
                                               <Avatar w="2.2rem" h="2.2rem" src={img6} ml={1} mt={1} />
                                               <Box>
@@ -137,6 +137,7 @@ function Stream() {
                                           </Box>
                                           
                   </Box>
+                  
                                       
               </Box>
               <Center h="12%" w="100%" position="sticky">
