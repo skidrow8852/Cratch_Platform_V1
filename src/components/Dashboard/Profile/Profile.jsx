@@ -7,6 +7,8 @@ import {Link} from "react-router-dom"
 
 function Profile() {
     const {colorMode} = useColorMode();
+    const [about, setAbout] = React.useState("This is a simple About Stuff....")
+    const [tab,setTab] = React.useState(1);
 
     const videos = [
         {
@@ -44,7 +46,7 @@ function Profile() {
                           <Text width="100%" as="h1" fontSize="1.7rem" color="rgb(255,255,255,0.90)" fontFamily="sans-serif" pt={3} pb={5}  fontWeight="bold">Profile</Text>
                       </Box>
                     <Box maxHeight="70vh" width="100%" overflowY="auto">
-                        <Box height="20vh" width="100%" borderRadius="5px" bgImage={`url(${meta})`} bgSize="cover">
+                        <Box height="20vh" width="100%" borderRadius="5px" bgImage={`url(${meta})`} bgSize="cover" bgPosition="center center">
                            
                             
                         </Box>
@@ -65,9 +67,12 @@ function Profile() {
                                 </Box>
                                 
                                 
+                            </Box> 
+                            <Box d="flex" >
+                                <Text onClick={() => setTab(1)} cursor="pointer" color="rgb(255,255,255,0.85)" as="h2" fontSize="1.2rem" fontWeight="bold" pt={5} pb={2} w="6%" borderBottom={tab===1 ? "2px solid rgb(255,255,255,0.85)" : ""}>Videos</Text>
+                                <Text onClick={() => setTab(2)} ml={5} cursor="pointer" color="rgb(255,255,255,0.85)" as="h2" fontSize="1.2rem" fontWeight="bold" pt={5} pb={2} w="6%" borderBottom={tab===2 ? "2px solid rgb(255,255,255,0.85)" : ""}>About</Text>
                             </Box>
-                            <Text cursor="pointer" color="rgb(255,255,255,0.85)" as="h2" fontSize="1.2rem" fontWeight="bold" pt={5} pb={2} w="6%" borderBottom="2px solid rgb(255,255,255,0.85)">Videos</Text>
-                            <Box d="grid" gridTemplateColumns="4fr 4fr 4fr 4fr" gap={5} mt={5}>
+                            {tab === 1 && <Box d="grid" gridTemplateColumns="4fr 4fr 4fr 4fr" gap={5} mt={5}>
                             {videos.map(({ title, watchingOrViews, videoUrl}) => (
         
                                 <Box borderRadius="20px" height="10.3rem" >
@@ -96,7 +101,8 @@ function Profile() {
                                 </Box>
                             ))}
       
-                            </Box>
+                            </Box>}
+                            {tab === 2 && <Box mt={5} w="80%"><Text fontSize="1.1rem" as="h1" fontFamily="sans-serif">{about}</Text></Box>}
 
                         </Box>
                     </Box>
