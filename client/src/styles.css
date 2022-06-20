@@ -1,0 +1,72 @@
+
+/* Scroll style */
+
+*::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #313334;   
+  border-radius: 5px;     /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(100,101,101);
+  border-radius: 5px; 
+
+}
+
+div::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+  div::-webkit-scrollbar-track {
+    background: #313334;   
+    border-radius: 5px;     /* color of the tracking area */
+  }
+  
+  div::-webkit-scrollbar-thumb {
+    background-color: rgb(100,101,101);
+    border-radius: 5px; 
+
+  }
+
+  body::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #313334;   
+    border-radius: 5px;     /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(100,101,101);
+    border-radius: 5px; 
+
+  }
+
+  section::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+  section::-webkit-scrollbar-track {
+    background: #313334;   
+    border-radius: 5px;     /* color of the tracking area */
+  }
+  
+  section::-webkit-scrollbar-thumb {
+    background-color: rgb(100,101,101);
+    border-radius: 5px; 
+
+  }
+
+
+html {
+    scrollbar-color: rgb(100,101,101) #313334;
+    background-color: #111315;
+}
+
+
+
+

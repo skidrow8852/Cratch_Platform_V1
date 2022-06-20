@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1fbbde6 (Added most functionalities)
   "name": "account",
   "version": "0.1.0",
   "private": true,
@@ -9,10 +13,15 @@
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
     "axios": "^0.27.2",
     "emoji-picker-react": "^3.5.1",
     "framer-motion": "^6.3.0",
     "moralis": "^1.8.0",
+=======
+    "apexcharts": "^3.35.3",
+    "framer-motion": "^6.3.0",
+>>>>>>> 1fbbde6 (Added most functionalities)
     "nuka-carousel": "^5.0.7",
     "react": "^18.0.0",
     "react-copy-to-clipboard": "^5.1.0",
@@ -20,6 +29,7 @@
     "react-dropzone": "^14.2.1",
     "react-icons": "^4.3.1",
     "react-loader-spinner": "^6.0.0-0",
+<<<<<<< HEAD
     "react-moralis": "^1.4.0",
     "react-player": "^2.10.1",
     "react-router-dom": "^6.3.0",
@@ -31,6 +41,14 @@
     "timeago.js": "^4.0.2",
     "web-vitals": "^2.1.4",
     "web3.storage": "^4.2.0"
+=======
+    "react-player": "^2.10.1",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.0",
+    "react-spinners": "^0.12.0",
+    "recharts": "^2.1.10",
+    "web-vitals": "^2.1.4"
+>>>>>>> 1fbbde6 (Added most functionalities)
   },
   "scripts": {
     "start": "react-scripts start",
@@ -56,4 +74,32 @@
       "last 1 safari version"
     ]
   }
+<<<<<<< HEAD
+=======
+=======
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "get-video-duration": "^4.1.0",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.5",
+    "multer": "^1.4.5-lts.1",
+    "socket.io": "^4.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend": "nodemon server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+>>>>>>> 015c116 (Added Live streaming, Video upload, Token transfer)
+>>>>>>> 1fbbde6 (Added most functionalities)
 }
