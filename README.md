@@ -1,4 +1,4 @@
-# Cratch Version_1
+# Cratch V1
 
 Cratch is the first decentralized live & video streaming platform in the Metaverse. 
 Cratch allows users to create or watch live streams in a Mobile App, Website and Metaverse world, while rewarding them from every minute they spend on the platform.
