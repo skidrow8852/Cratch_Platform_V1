@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-# Cratch_Platfrom
-=======
-
-
