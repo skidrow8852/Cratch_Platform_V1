@@ -7,7 +7,7 @@
     "frontend" : {
       "dependencies": ["test"],
       "frontend": {
-        "entrypoint": "build/index.html"
+        "entrypoint": "public/index.html"
       },
       "source": [
         "build"
