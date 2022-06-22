@@ -25,8 +25,9 @@ function Header() {
   const [notifClickBell, setNotifClickBell] = React.useState(false)
   
 
-  const hadleLogout = () => {
+  const hadleLogout = () => {   
     localStorage.removeItem('user');
+    editUser(user,{isOnline : false})
     window.location.reload()
   }
 
