@@ -17,17 +17,6 @@ function Sidebar() {
   const [active,setActive] = React.useState(0);
   const [colorDarkMode, setColorDarkMode] = React.useState(true)
 
-
-
-React.useEffect(() => {
-  window.onbeforeunload = async (event) => {
-    // Cancel the event
-    event.preventDefault();
-    await editUser(user,{isOnline : false})
-    
-  };
-})
-
 const changeUserStatus = async() => {
   await editUser(user,{isOnline : true})
 }
