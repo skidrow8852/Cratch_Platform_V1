@@ -28,7 +28,7 @@ const __dirname1 = path.resolve()
 
 if (process.env.NODE_ENV === "production") {
 
-  // Set static folder
+  
   app.use(express.static(path.join(__dirname1,"/client/build")));
 
   // index.html for all page routes
